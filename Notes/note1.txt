@@ -1,0 +1,15 @@
+Aim: 
+1.Give the list of websites you wanted to monitor closely and any update that happens at that will be summarized 
+using the gpt kinda thing and send mail to the client...
+2.clear the cache that happend on the server and database
+3.auomatically adjust the functions...(can be used by comapnies to monitor the policy changes and news)
+
+steps:
+1.javascript code(crawler.js)
+2.scrapper that takes the input and summarise using the gpt kinda model(scrapper.js)
+3.set up the database for the user name,mail-id,gpt response(server sided)
+4.the complete autosenting(like databse cleaning and other possible optimization can be done).
+5.try to implement the authentication and the setup for the project
+
+ideas that i got(crawler.js):
+1.verify in the browser itself wether the format of a webpage is legal one or not.
