@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cheerio": "^1.0.0-rc.12",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  },
+  "name": "twiker",
+  "version": "1.0.0",
+  "description": "apllication for tracking changes",
+  "main": "bot.js",
+  "engines":{
+    "node": "v12.22.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guhanarul/Twiker.git"
+  },
+  "keywords": [
+    "tracker"
+  ],
+  "author": "Guhan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/guhanarul/Twiker/issues"
+  },
+  "homepage": "https://github.com/guhanarul/Twiker#readme"
+}
