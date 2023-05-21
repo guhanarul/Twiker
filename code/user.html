@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>
+        SUBSCRIBE
+      </title>
+    </head>
+    <body>
+      <p>Track all the changes that happens to your 
+        favourite websites(links only for now)
+      </p>
+      <br>
+      <h1>Subscribe here</h1>
+      <p>
+        Fill up and subscribe to get the changes
+        happens in your favourite websites as a mail :!
+        <br>
+        <h3>CAUTION:Submit the correct url format without bug or chances are there that you wont get an update!</h3>
+      </p>
+      <form id="formn">
+        <label for="mail" id="mail">Mail Id:</label>
+        <input type="text" id="mail"> 
+        <br><br>
+        <label for="w1">Url 1:</label>
+        <input type="text" id="w1">
+        <br><br>
+        <label for="w2">Url 2:</label>
+        <input type="text" id="w2">
+        <br><br>
+        <label for="w3">Url 3:</label>
+        <input type="text" id="w3">
+        <br><br>
+        <input type="submit" value="Subscribe">
+
+      </form>
+    </body>
+    <script>
+        const form=document.getElementById('formn');
+        form.addEventListener('submit',function(event){
+            event.preventDefault();
+            if(!validate()){
+              alert("Fill all the inputs before proceeding!");
+            }
+            else{
+              const formdata=new FormData(form);
+              fetch('/server',{
+                method: 'POST',
+                body: formdata
+              }).then((response)=>{
+                if(response.ok){
+                  alert("Subscribed");
+                  location.reload();
+                }
+                else{
+                  console.log("failed");
+                }
+              }).catch((error)=>{
+                console.log(error);
+              });
+            } 
+            function validate(){
+            var values=document.querySelectorAll('input');
+            for(let i=0;i<values.length;i++){
+              if(!values[i].value){
+                return false;
+              }
+              
+            }
+            return true;
+      };
+            
+          });
+    </script>
+</html>
